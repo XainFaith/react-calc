@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    pad: 0;
+}
+
+body{
+    background-color: rgba(0,0,0,0.5);
+}
+
+#UtilBar
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#UtilBar > #ModeSelectorContainer
+{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+    font-size: large;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    position: relative;
+}
+
+#ModeSelector > select 
+{
+    appearance: none;
+    /* safari */
+    -webkit-appearance: none;
+    /* other styles for aesthetics */
+    font-size: 1.15rem;
+    padding: 0.675em 6em 0.675em 1em;
+    background-color: #fff;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    color: #000;
+    cursor: pointer;
+    width: 100%;
+}
+
+#ModeSelector::before, 
+#ModeSelector::after
+{
+    --size: 0.3rem;
+  position: absolute;
+  content: "";
+  right: 1rem;
+  pointer-events: none;
+}
+
+#ModeSelector::before
+{
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid black;
+    top: 40%;
+}
+
+#ModeSelector::after
+{
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid black;
+    top: 55%;
+}
+
+#Calculator
+{
+    background-color:  white;
+    width: 600px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    position: fixed;
+    left: 25%;
+    top: 30%;
+    translate: (-50%, -50%);
+}
+
+#DigitDisplay{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    vertical-align: middle;
+    align-items: center;
+    width:100%;
+}
+
+#DigitDisplay > p{
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    width: 100%;
+    font-size:xx-large;
+    display: flex;
+    justify-content: flex-end;    
+    margin-bottom: 10px;
+    padding-right: 5px;
+    border-radius: 4px;
+}
+
+.CalcButton
+{
+    background-color: white;
+    border: 1px solid lightgray;
+    font-size: x-large;
+    min-height: 50px;
+    width: 100%;
+    margin: 2px;
+    transition: background-color 1s linear;
+}
+
+.CalcButton:hover
+{
+    background-color: lightblue;
+}
+
+.CalcButton:active
+{
+    background-color: lightgreen;
+    transition: none;
+}
+
+.CalcButtonPressed
+{
+    background-color: lightgreen !important;
+    transition: none;
+}
+
+#InputContainer
+{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.BlueButton
+{
+    background-color: lightblue;
+}
+
+.BlueButton:hover{
+    background-color: lightgreen;
+}
